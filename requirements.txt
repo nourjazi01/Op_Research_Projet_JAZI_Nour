@@ -1,2 +1,0 @@
-# No external Python package required.
-# Graphviz command-line tool is optional for rendering DOT files.
