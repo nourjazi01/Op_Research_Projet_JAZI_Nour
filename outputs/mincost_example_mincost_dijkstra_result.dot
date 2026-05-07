@@ -1,0 +1,11 @@
+digraph G {
+  rankdir=LR;
+  label="Minimum Cost Flow Dijkstra Result";
+  labelloc="t";
+  node [shape=circle];
+  "s" -> "a" [label="2/3 | c=1"];
+  "s" -> "b" [label="3/4 | c=2"];
+  "a" -> "b" [label="2/2 | c=-2"];
+  "a" -> "t" [label="0/2 | c=3"];
+  "b" -> "t" [label="5/5 | c=1"];
+}

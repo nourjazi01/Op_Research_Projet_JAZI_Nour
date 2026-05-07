@@ -1,0 +1,31 @@
+{
+  "source": "s",
+  "sink": "t",
+  "edges": [
+    {
+      "from": "s",
+      "to": "a",
+      "capacity": 10
+    },
+    {
+      "from": "s",
+      "to": "b",
+      "capacity": 5
+    },
+    {
+      "from": "a",
+      "to": "b",
+      "capacity": 15
+    },
+    {
+      "from": "a",
+      "to": "t",
+      "capacity": 10
+    },
+    {
+      "from": "b",
+      "to": "t",
+      "capacity": 10
+    }
+  ]
+}

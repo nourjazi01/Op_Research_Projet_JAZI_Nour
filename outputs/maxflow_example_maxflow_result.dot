@@ -1,0 +1,11 @@
+digraph G {
+  rankdir=LR;
+  label="Maximum Flow Result";
+  labelloc="t";
+  node [shape=circle];
+  "s" -> "a" [label="10/10"];
+  "s" -> "b" [label="5/5"];
+  "a" -> "b" [label="0/15"];
+  "a" -> "t" [label="10/10"];
+  "b" -> "t" [label="5/10"];
+}

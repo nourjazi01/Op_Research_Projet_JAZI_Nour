@@ -1,0 +1,27 @@
+{
+  "source": "s",
+  "sink": "t",
+  "demand": 20,
+  "edges": [
+
+    {"from": "s", "to": "0", "capacity": 20, "cost": 0},
+
+    {"from": "0", "to": "1", "capacity": 15, "cost": 4},
+    {"from": "0", "to": "2", "capacity": 8, "cost": 4},
+
+    {"from": "1", "to": "2", "capacity": 20, "cost": 2},
+    {"from": "1", "to": "3", "capacity": 4, "cost": 2},
+    {"from": "1", "to": "4", "capacity": 10, "cost": 6},
+
+    {"from": "2", "to": "3", "capacity": 15, "cost": 1},
+    {"from": "2", "to": "4", "capacity": 4, "cost": 3},
+
+    {"from": "3", "to": "4", "capacity": 20, "cost": 2},
+    {"from": "4", "to": "2", "capacity": 5, "cost": 3},
+
+    {"from": "3", "to": "t", "capacity": 5, "cost": 0},
+    {"from": "4", "to": "t", "capacity": 15, "cost": 0},
+
+    {"from": "t", "to": "s", "capacity": 1000, "cost": 0}
+  ]
+}
