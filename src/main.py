@@ -18,13 +18,6 @@ def load_graph(path: str) -> tuple[Graph, dict]:
 
 
 def output_dot_path(input_file: str, suffix: str) -> str:
-    """
-    Creates a clear output filename based on the input example name.
-
-    Example:
-    examples/teacher_maxflow.json + maxflow
-    => outputs/teacher_maxflow_maxflow_result.dot
-    """
     Path("outputs").mkdir(exist_ok=True)
     name = Path(input_file).stem
     return f"outputs/{name}_{suffix}_result.dot"

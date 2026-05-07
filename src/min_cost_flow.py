@@ -23,11 +23,7 @@ def min_cost_flow_bellman_ford(
     sink: str,
     demand: int,
 ) -> tuple[int, int]:
-    """
-    Successive shortest augmenting path algorithm.
-    Shortest paths are computed using Bellman-Ford.
-    This version supports negative residual costs.
-    """
+
     sent = 0
 
     while sent < demand:
@@ -48,11 +44,7 @@ def min_cost_flow_bellman_ford(
 
 
 def initialize_potentials_with_bellman_ford(graph: Graph, source: str) -> Dict[str, float]:
-    """
-    Initial potentials are shortest path distances from source.
-    This allows reduced costs to be non-negative.
-    Unreachable vertices receive potential 0.
-    """
+
     dist, _ = bellman_ford_shortest_path(graph, source)
 
     potentials = {}
@@ -68,10 +60,7 @@ def min_cost_flow_dijkstra(
     sink: str,
     demand: int,
 ) -> tuple[int, int]:
-    """
-    Successive shortest augmenting path algorithm.
-    Shortest paths are computed using Dijkstra with reduced costs.
-    """
+
     sent = 0
     potentials = initialize_potentials_with_bellman_ford(graph, source)
 

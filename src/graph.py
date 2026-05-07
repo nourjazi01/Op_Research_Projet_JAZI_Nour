@@ -17,16 +17,6 @@ class Edge:
 
 
 class Graph:
-    """
-    Directed graph represented as a residual graph.
-
-    For each original edge u -> v, we add:
-    - a forward edge with capacity c and cost cost
-    - a reverse edge with capacity 0 and cost -cost
-
-    The reverse edge is essential because it allows the algorithms
-    to cancel part of a previous augmentation.
-    """
 
     def __init__(self) -> None:
         self.adj: Dict[str, List[Edge]] = {}

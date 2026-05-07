@@ -8,10 +8,6 @@ Parent = Dict[str, Tuple[str, int]]
 
 
 def bfs_augmenting_path(graph: Graph, source: str, sink: str) -> Optional[Parent]:
-    """
-    Finds an augmenting path in the residual graph using BFS.
-    Returns parent[v] = (u, edge_index), or None if sink is unreachable.
-    """
     visited = {source}
     parent: Parent = {}
     queue = deque([source])
@@ -55,10 +51,7 @@ def apply_augmentation(graph: Graph, parent: Parent, source: str, sink: str, amo
 
 
 def max_flow(graph: Graph, source: str, sink: str) -> int:
-    """
-    Edmonds-Karp implementation:
-    Ford-Fulkerson where augmenting paths are found using BFS.
-    """
+
     total = 0
 
     while True:
@@ -89,10 +82,7 @@ def reachable_in_residual_graph(graph: Graph, source: str) -> Set[str]:
 
 
 def min_cut(graph: Graph, source: str) -> tuple[Set[str], Set[str], List[tuple[str, str, int]]]:
-    """
-    After max-flow, vertices reachable from source define S.
-    The min cut contains original edges from S to V-S.
-    """
+    
     s_set = reachable_in_residual_graph(graph, source)
     t_set = set(graph.nodes()) - s_set
 

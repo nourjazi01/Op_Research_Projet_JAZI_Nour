@@ -2,12 +2,6 @@ from .graph import Graph
 
 
 def export_to_dot(graph: Graph, path: str, title: str = "Flow Graph") -> None:
-    """
-    Exports original edges to Graphviz DOT format.
-
-    Edge label:
-    flow/capacity | cost
-    """
     with open(path, "w", encoding="utf-8") as f:
         f.write("digraph G {\n")
         f.write('  rankdir=LR;\n')
